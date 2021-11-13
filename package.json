@@ -1,6 +1,6 @@
 {
-  "name": "date-format-parse",
-  "version": "0.2.7",
+  "name": "date-format-parse-roc",
+  "version": "0.2.8",
   "description": "Lightweight date format and parse",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -13,7 +13,7 @@
     "build:compile.cjs": "MODULE_TYPE=cjs babel src --out-dir lib --extensions .ts",
     "build:compile.es": "babel src --out-dir es --extensions .ts",
     "build:types": "tsc --project tsconfig.types.json --outDir lib && tsc --project tsconfig.types.json --outDir es",
-    "build": "npm run lint && npm test && npm run clean && npm run build:compile.cjs && npm run build:compile.es && npm run build:types",
+    "build": "npm run lint && npm test && npm run clean && npm run build:compile.es && npm run build:types",
     "test": "jest",
     "cov": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "clean": "rimraf es lib coverage",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mengxiong10/date-format-parse.git"
+    "url": "git+https://github.com/angel520erc/date-format-parse-roc.git"
   },
   "keywords": [
     "date",
@@ -34,9 +34,9 @@
   "author": "xiemengxiong",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mengxiong10/date-format-parse/issues"
+    "url": "https://github.com/angel520erc/date-format-parse-roc/issues"
   },
-  "homepage": "https://github.com/mengxiong10/date-format-parse#readme",
+  "homepage": "https://github.com/angel520erc/date-format-parse-roc#readme",
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.7.0",

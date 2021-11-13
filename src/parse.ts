@@ -4,12 +4,13 @@ import defaultLocale from './locale/en';
 
 import { startOfWeekYear } from './util';
 
-const formattingTokens = /(\[[^\[]*\])|(MM?M?M?|Do|DD?|ddd?d?|w[o|w]?|YYYY|YY|a|A|hh?|HH?|mm?|ss?|S{1,3}|x|X|ZZ?|.)/g;
+const formattingTokens = /(\[[^\[]*\])|(MM?M?M?|Do|DD?|ddd?d?|w[o|w]?|YYYY|ROC|YY|a|A|hh?|HH?|mm?|ss?|S{1,3}|x|X|ZZ?|.)/g;
 
 const match1 = /\d/; // 0 - 9
 const match2 = /\d\d/; // 00 - 99
 const match3 = /\d{3}/; // 000 - 999
 const match4 = /\d{4}/; // 0000 - 9999
+const match1to3 = /\d\d?\d?/; // 0 - 999
 const match1to2 = /\d\d?/; // 0 - 99
 const matchShortOffset = /[+-]\d\d:?\d\d/; // +00:00 -00:00 +0000 or -0000
 const matchSigned = /[+-]?\d+/; // -inf - inf
@@ -107,6 +108,7 @@ addParseFlag('YY', match2, input => {
   value = (value > 68 ? cent - 1 : cent) * 100 + value;
   return { [YEAR]: value };
 });
+addParseFlag('ROC', match1to3,YEAR)
 addParseFlag('YYYY', match4, YEAR);
 addParseFlag('M', match1to2, input => ({ [MONTH]: parseInt(input, 10) - 1 }));
 addParseFlag('MM', match2, input => ({ [MONTH]: parseInt(input, 10) - 1 }));

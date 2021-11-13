@@ -1,13 +1,13 @@
-# date-format-parse
+# date-format-parse-roc
 
-<a href="https://travis-ci.org/mengxiong10/date-format-parse">
-  <img src="https://travis-ci.org/mengxiong10/date-format-parse.svg?branch=master" alt="build:passed">
+<a href="https://travis-ci.org/angel520erc/date-format-parse-roc">
+  <img src="https://travis-ci.org/angel520erc/date-format-parse-roc.svg?branch=master" alt="build:passed">
 </a>
-<a href="https://coveralls.io/github/mengxiong10/date-format-parse">
-  <img src="https://coveralls.io/repos/github/mengxiong10/date-format-parse/badge.svg?branch=master&service=github" alt="Badge">
+<a href="https://coveralls.io/github/angel520erc/date-format-parse-roc">
+  <img src="https://coveralls.io/repos/github/angel520erc/date-format-parse-roc/badge.svg?branch=master&service=github" alt="Badge">
 </a>
-<a href="https://www.npmjs.com/package/date-format-parse">
-  <img src="https://img.shields.io/npm/v/date-format-parse.svg" alt="npm">
+<a href="https://www.npmjs.com/package/date-format-parse-roc">
+  <img src="https://img.shields.io/npm/v/date-format-parse-roc.svg" alt="npm">
 </a>
 <a href="LICENSE">
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT">
@@ -18,7 +18,7 @@ Lightweight date format and parse. Meant to replace the primary functions of for
 ## NPM
 
 ```bash
-$ npm install date-format-parse --save
+$ npm install date-format-parse-roc --save
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ $ npm install date-format-parse --save
 Format Date to String.
 
 ```js
-import { format } from 'date-format-parse';
+import { format } from 'date-format-parse-roc';
 
 format(new Date(), 'YYYY-MM-DD HH:mm:ss.SSS');
 
@@ -44,7 +44,7 @@ format(new Date(), 'YYYY-MM-DD', { locale: obj })
 Parse String to Date
 
 ```js
-import { parse } from 'date-format-parse';
+import { parse } from 'date-format-parse-roc';
 
 parse('2019-12-10 14:11:12', 'YYYY-MM-DD HH:mm:ss'); // new Date(2019, 11, 10, 14, 11, 12)
 

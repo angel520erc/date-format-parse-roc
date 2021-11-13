@@ -2,7 +2,7 @@ import { toDate, isValidDate, getWeek } from './util';
 import { Locale } from './locale';
 import defaultLocale from './locale/en';
 
-const REGEX_FORMAT = /\[([^\]]+)]|YYYY|YY?|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|m{1,2}|s{1,2}|Z{1,2}|S{1,3}|w{1,2}|x|X|a|A/g;
+const REGEX_FORMAT = /\[([^\]]+)]|YYYY|ROC|YY?|M{1,4}|D{1,2}|d{1,4}|H{1,2}|h{1,2}|m{1,2}|s{1,2}|Z{1,2}|S{1,3}|w{1,2}|x|X|a|A/g;
 
 function pad(val: number, len = 2) {
   let output = `${Math.abs(val)}`;
@@ -43,6 +43,10 @@ const formatFlags: FormatFlag = {
   // Year: 00, 01, ..., 99
   YY(date) {
     return pad(date.getFullYear(), 4).substr(2);
+  },
+  // Year: 000, 001, ..., 999
+  ROC(date) {
+    return pad(date.getFullYear(), 3);
   },
 
   // Year: 1900, 1901, ..., 2099
